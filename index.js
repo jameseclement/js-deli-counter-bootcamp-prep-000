@@ -1,6 +1,14 @@
-function takeANumber(currentLine, newName) {
-    currentLine.push(newName)
-    return `Welcome, ${newName}. You are number ${currentLine.length} in line.`
+number = 1
+function takeANumber(currentLine) {
+    
+   var welcome = `Welcome, you are ticket number ${number}.`
+  
+   currentLine.push(number)
+     number = number + 1
+    
+    return welcome
+   
+    
 }
 
 function nowServing(currentLine) {
@@ -22,9 +30,9 @@ function currentLine(currentLine) {
             if (i === 0) {
                 output = `${output} ${currentLine[i]}`
             } else {
-                output = output + `, ${i+1}. ${currentLine[i]}`
+                output = `${output}, ${i+1}. ${currentLine[i]}`
             }
         }
-    }
+    } 
     return output
 }
